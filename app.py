@@ -23,15 +23,15 @@ app = Flask(__name__)
 config = configparser.ConfigParser()
 config.read("config.ini")
 
-# line_bot_api = LineBotApi(config['line_bot']['Channel_Access_Token'])
-# handler = WebhookHandler(config['line_bot']['Channel_Secret'])
+# line_bot_api = LineBotApi(config['line_bot']['gykY4fX9E2OVAHB5T2bsAYc6jdBvYuVD+4UOVU884pTBiXbkakmkwlrum/OjSkQ7QXO4++jzzWoeGb6p+CXBEEDeRnzMMZCT9u4fivWiRwxWwKOeaX6/ndE4/jyrGlhzsiKbN76bxZuZDrR61i/w1FGUYhWQfeY8sLGRXgo3xvw='])
+# handler = WebhookHandler(config['line_bot']['c9090fcb98c6171554e57bc42e50ff79'])
 # client_id = config['imgur_api']['Client_ID']
 # client_secret = config['imgur_api']['Client_Secret']
 # album_id = config['imgur_api']['Album_ID']
 # API_Get_Image = config['other_api']['API_Get_Image']
 
-line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'], timeout=10000)
-handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
+line_bot_api = LineBotApi(os.environ['gykY4fX9E2OVAHB5T2bsAYc6jdBvYuVD+4UOVU884pTBiXbkakmkwlrum/OjSkQ7QXO4++jzzWoeGb6p+CXBEEDeRnzMMZCT9u4fivWiRwxWwKOeaX6/ndE4/jyrGlhzsiKbN76bxZuZDrR61i/w1FGUYhWQfeY8sLGRXgo3xvw='], timeout=10000)
+handler = WebhookHandler(os.environ['c9090fcb98c6171554e57bc42e50ff79'])
 google_api_key = os.environ['GOOGLE_API_KEY']
 DB_url = os.environ['DATABASE_URL']
 line_reply_api = 'https://api.line.me/v2/bot/message/reply'
